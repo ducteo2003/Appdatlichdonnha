@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="relative antialiased bg-gray-100">
+    <!-- Start Nav -->
+    <nav class="p-4 md:py-8 xl:px-0 md:container md:mx-w-6xl md:mx-auto">
+        <div x-data="{ open: false }" class="lg:hidden relative flex justify-between w-full">
+            <a href="#" class="flex items-start gap-2 group">
+                <div class="bg-blue-600 text-white p-3 rounded-md group-hover:bg-blue-800">
+                    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                </div>
+                <p class="text-sm font-light">
+                    Welcome back,
+                    <span class="text-base block font-bold tracking-widest">
+                        Atom
+                    </span>
+                </p>
+            </a>
+            <button x-on:click="open = !open" type="button" class="bg-gray-200 p-3 rounded-md">
+                <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div x-show="open" x-transition class="absolute top-14 left-0 right-0 w-full bg-white rounded-md border">
+                <ul class="p-4">
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="#" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            My Account
+                        </a>
+                    </li>
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="#" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            Order
+                        </a>
+                    </li>
+                    <li class="px-4 py-2 rounded hover:bg-gray-200">
+                        <a href="#" class="flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Nav -->
+
+    <!-- Start Main -->
+    <main class="container mx-w-6xl mx-auto py-4">
+        <div class="flex flex-col space-y-8">
+            <!-- First Row -->
+            <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 px-4 xl:p-0 gap-y-4 md:gap-6">
+                <div
+                    class="col-span-2 p-6 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-800 flex flex-col justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-white font-bold">Lorem ipsum dolor sit amet</p>
+                        <p class="mt-1 text-xs md:text-sm text-gray-50 font-light leading-tight max-w-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio soluta saepe consequuntur
+                            facilis ab a. Molestiae ad saepe assumenda praesentium rem dolore? Exercitationem, neque
+                            obcaecati?
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-end mt-2">
+                        <a href="#"
+                            class="bg-blue-800 px-4 py-3 rounded-lg text-white text-xs tracking-wider font-semibold hover:bg-blue-600 hover:text-white">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End First Row -->
+
+            <!-- Start Second Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 xl:p-0 gap-4 xl:gap-6">
+                <div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-between">
+                    <h2 class="text-lg ml-4 md:text-sm text-gray-700 font-bold tracking-wide md:tracking-wider">
+                        Services
+                    </h2>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Clean</p>
+                            <h3 class="mt-1 text-lg text-blue-500 font-bold">$ 818</h3>
+                        </div>
+                        <div class="bg-blue-500 p-2 md:p-1 xl:p-2 rounded-md">
+                            <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"
+                                fill="#000000" class="h-6 w-6">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <style type="text/css">
+                                        .bentblocks_een {
+                                            fill: #ffffff;
+                                        }
+                                    </style>
+                                    <path class="bentblocks_een"
+                                        d="M25.151,13.296c0.074,0.008,0.148,0.012,0.223,0.012c0.51,0,1.019-0.188,1.407-0.575l0.636-0.636 c0.778-0.778,0.778-2.051,0-2.828l-4.685-4.685C22.343,4.194,21.83,4,21.318,4s-1.025,0.194-1.414,0.583L19.267,5.22 c-0.444,0.444-0.625,1.047-0.563,1.629c-0.074-0.008-0.148-0.012-0.223-0.012c-0.51,0-1.019,0.188-1.407,0.575l-0.636,0.636 c-0.443,0.444-0.625,1.047-0.563,1.629c-0.074-0.008-0.148-0.012-0.223-0.012c-0.51,0-1.019,0.188-1.407,0.575l-0.636,0.636 c-0.444,0.444-0.625,1.047-0.563,1.629c-0.074-0.008-0.148-0.012-0.223-0.012c-0.51,0-1.019,0.188-1.407,0.575l-0.636,0.636 c-0.778,0.778-0.778,2.051,0,2.828l1.635,1.635L4,26.586V28h1.414l8.417-8.417l1.635,1.635c0.389,0.389,0.902,0.583,1.414,0.583 c0.513,0,1.025-0.194,1.414-0.583l0.636-0.636c0.444-0.444,0.625-1.047,0.563-1.629c0.074,0.008,0.148,0.012,0.223,0.012 c0.51,0,1.019-0.188,1.407-0.575l0.636-0.636c0.444-0.444,0.625-1.047,0.563-1.629c0.074,0.008,0.148,0.012,0.223,0.012 c0.51,0,1.019-0.188,1.407-0.575l0.636-0.636C25.032,14.481,25.213,13.877,25.151,13.296z M23.174,13.511l-0.638,0.625l-2.454-0.262 l0.264,2.466l-0.638,0.625l-2.454-0.262l0.264,2.466l-0.636,0.636l-4.685-4.685l0.638-0.625l2.454,0.262l-0.264-2.466l0.638-0.625 l2.454,0.262l-0.264-2.466l0.638-0.625L20.945,9.1l-0.264-2.466l0.631-0.633C21.313,6,21.315,6,21.318,6l0-0.002l4.685,4.685 l-0.638,0.625l-2.454-0.262L23.174,13.511z M20,24h2v4h-2V24z M24,20h4v2h-4V20z M12,8h-2V4h2V8z M8,12H4v-2h4V12z M6,6H4V4h2V6z M26,26h2v2h-2V26z M30,14v2h-2v-2H30z M18,4h-2V2h2V4z M5,17v-2h2v2H5z M13,25h2v2h-2V25z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Repair</p>
+                            <h3 class="mt-1 text-lg text-green-500 font-bold">$ 918</h3>
+                        </div>
+                        <div class="bg-green-500 p-2 md:p-1 xl:p-2 rounded-md">
+                            <svg fill="#ffffff" height="200px" width="200px" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 442 442" xml:space="preserve" stroke="#ffffff" class="h-6 w-6">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <path
+                                            d="M232.307,138.009c-3.904,3.906-3.904,10.237,0.002,14.143s10.238,3.905,14.142-0.002l8.257-8.26 c2.97-2.971,3.767-7.481,1.994-11.29c-5.51-11.84-8.304-24.089-8.304-36.408c0-25.079,10.917-48.7,29.331-65.02l0.032,65.461 c0.001,3.279,1.611,6.35,4.307,8.217l47.446,32.854c3.423,2.37,7.958,2.372,11.382,0.002l47.463-32.837 c2.7-1.868,4.311-4.941,4.311-8.225l-0.007-65.457c18.412,16.305,29.33,39.907,29.336,64.965c0,23.19-9.029,44.993-25.425,61.392 c-16.383,16.387-38.159,25.408-61.325,25.408c-0.022,0-0.045,0-0.068,0c-7.971-0.006-23.618-3.865-28.975-5.352 c-3.473-0.966-7.199,0.015-9.748,2.563l-30.402,30.403c-3.905,3.905-3.905,10.237,0,14.143c1.953,1.952,4.512,2.929,7.071,2.929 s5.119-0.977,7.071-2.929l26.353-26.354c7.347,1.817,19.976,4.591,28.614,4.597c0.03,0,0.055,0,0.084,0 c28.505-0.001,55.307-11.104,75.467-31.268c20.172-20.176,31.281-47,31.281-75.534c-0.009-38.434-20.863-74.074-54.423-93.013 c-3.096-1.747-6.887-1.72-9.958,0.073c-3.07,1.793-4.958,5.081-4.957,8.637l0.008,79.557l-37.46,25.916L297.76,91.387 l-0.039-79.563c-0.002-3.555-1.891-6.842-4.961-8.633c-3.07-1.792-6.861-1.817-9.957-0.069 c-33.557,18.956-54.403,54.618-54.403,93.069c0,12.988,2.48,25.854,7.383,38.343L232.307,138.009z">
+                                        </path>
+                                        <path
+                                            d="M205.828,270.797L67.106,409.524c-5.213,5.216-12.143,8.09-19.513,8.095c-0.005,0-0.009,0-0.015,0 c-7.368-0.001-14.299-2.873-19.511-8.085c-5.211-5.217-8.077-12.156-8.068-19.541c0.008-7.363,2.879-14.275,8.097-19.476 l119.319-119.33c3.905-3.905,3.905-10.236,0-14.142c-3.905-3.904-10.237-3.905-14.142,0.001L13.967,356.364 C4.975,365.325,0.015,377.26,0,389.97c-0.015,12.731,4.928,24.699,13.922,33.703c8.994,8.994,20.946,13.946,33.656,13.946 c0.009,0,0.018,0,0.026,0c12.711-0.007,24.661-4.964,33.647-13.955L219.97,284.94c3.905-3.905,3.905-10.237,0-14.143 C216.064,266.893,209.733,266.893,205.828,270.797z">
+                                        </path>
+                                        <path
+                                            d="M47.436,377.851c-3.294,0.002-6.388,1.289-8.672,3.585c-4.807,4.777-4.831,12.583-0.054,17.398 c0.012,0.013,0.024,0.024,0.036,0.037c2.395,2.389,5.539,3.585,8.688,3.585c3.156,0,6.317-1.202,8.73-3.61 c4.786-4.809,4.772-12.615-0.011-17.383c-2.325-2.33-5.417-3.612-8.709-3.612C47.442,377.851,47.439,377.851,47.436,377.851z">
+                                        </path>
+                                        <path
+                                            d="M374.381,327.157c-1.036-1.035-2.286-1.83-3.662-2.33l-28.677-10.398l-103.588-103.59l16.743-16.742 c3.905-3.905,3.906-10.237,0-14.143c-2.964-2.962-7.325-3.678-10.963-2.144L87.552,21.146C78.076,11.639,65.456,6.395,52.017,6.379 c-0.02,0-0.038,0-0.058,0c-13.439,0-26.071,5.226-35.576,14.72C6.866,30.616,1.629,43.264,1.637,56.714 c0.007,13.439,5.248,26.075,14.755,35.577l156.684,156.677c-1.534,3.637-0.82,7.998,2.144,10.962 c3.906,3.904,10.238,3.906,14.142,0l16.739-16.739L309.69,346.779l10.399,28.678c0.499,1.376,1.294,2.627,2.33,3.662l58.124,58.123 c1.953,1.952,4.512,2.929,7.071,2.929s5.119-0.977,7.071-2.929l37.819-37.819c1.875-1.876,2.929-4.419,2.929-7.071 s-1.054-5.195-2.929-7.071L374.381,327.157z M217.239,203.768c-0.021,0.021-0.043,0.044-0.064,0.065L186.7,234.308L30.532,78.147 c-5.732-5.729-8.891-13.344-8.895-21.443c-0.004-8.104,3.152-15.726,8.884-21.458c5.725-5.719,13.337-8.866,21.438-8.866 c0.012,0,0.024,0,0.035,0c8.093,0.009,15.689,3.165,21.403,8.897l156.175,156.159l-12.268,12.268 C217.283,203.725,217.261,203.746,217.239,203.768z M387.614,416.029l-49.48-49.48l-10.399-28.678 c-0.499-1.376-1.294-2.627-2.33-3.662l-105.161-105.16l4.068-4.067l105.16,105.161c1.036,1.035,2.286,1.83,3.662,2.33 l28.677,10.398l49.48,49.48L387.614,416.029z">
+                                        </path>
+                                        <path
+                                            d="M58.981,49.573c-3.905-3.904-10.237-3.904-14.142,0c-3.905,3.905-3.905,10.237,0,14.143l137.951,137.95 c1.952,1.952,4.512,2.929,7.071,2.929s5.119-0.977,7.071-2.929c3.905-3.905,3.905-10.237,0-14.143L58.981,49.573z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Food</p>
+                            <h3 class="mt-1 text-lg text-yellow-500 font-bold">$ 723</h3>
+                        </div>
+                        <div class="bg-yellow-500 p-2 md:p-1 xl:p-2 rounded-md">
+                            <svg fill="#ffffff" viewBox="0 0 128 128" id="Layer_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                transform="rotate(180)" stroke="#ffffff" class="h-6 w-6">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <path
+                                            d="M50.738,80.422h-7.29V59.87c2.413-1.353,4.05-3.932,4.05-6.889V15.896c0-4.354-3.542-7.896-7.896-7.896 s-7.896,3.542-7.896,7.896V52.98c0,2.958,1.637,5.537,4.05,6.889v20.552h-7.29c-2.73,0-4.979,2.127-5.119,4.84l-1.595,29.329 c-0.082,1.417,0.409,2.766,1.384,3.798c0.966,1.023,2.327,1.609,3.736,1.609h25.461c1.409,0,2.771-0.586,3.736-1.609 c0.975-1.032,1.466-2.381,1.384-3.795l-1.593-29.33C55.717,82.549,53.468,80.422,50.738,80.422z M33.705,52.98V15.896 c0-3.251,2.646-5.896,5.896-5.896s5.896,2.645,5.896,5.896V52.98c0,3.251-2.646,5.896-5.896,5.896S33.705,56.231,33.705,52.98z M54.613,117.017c-0.598,0.634-1.408,0.982-2.281,0.982H26.871c-0.873,0-1.684-0.349-2.281-0.982 c-0.593-0.628-0.893-1.448-0.843-2.313l1.596-29.334c0.085-1.652,1.457-2.946,3.122-2.946h8.29c0.553,0,1-0.448,1-1V60.649 c0.594,0.143,1.21,0.227,1.847,0.227s1.253-0.084,1.847-0.227v20.773c0,0.552,0.447,1,1,1h8.29c1.665,0,3.037,1.294,3.124,2.949 l1.594,29.335C55.506,115.568,55.206,116.389,54.613,117.017z">
+                                        </path>
+                                        <path
+                                            d="M31.456,85.475c-1.681,0-3.048,1.368-3.048,3.049v23.441c0,1.681,1.367,3.049,3.048,3.049s3.049-1.368,3.049-3.049V88.523 C34.505,86.842,33.137,85.475,31.456,85.475z M32.505,111.964c0,0.578-0.471,1.049-1.049,1.049s-1.048-0.471-1.048-1.049V88.523 c0-0.578,0.47-1.049,1.048-1.049s1.049,0.471,1.049,1.049V111.964z">
+                                        </path>
+                                        <path
+                                            d="M39.708,85.475c-1.681,0-3.048,1.368-3.048,3.049v23.441c0,1.681,1.367,3.049,3.048,3.049s3.049-1.368,3.049-3.049V88.523 C42.757,86.842,41.389,85.475,39.708,85.475z M40.757,111.964c0,0.578-0.471,1.049-1.049,1.049s-1.048-0.471-1.048-1.049V88.523 c0-0.578,0.47-1.049,1.048-1.049s1.049,0.471,1.049,1.049V111.964z">
+                                        </path>
+                                        <path
+                                            d="M47.96,85.475c-1.681,0-3.048,1.368-3.048,3.049v23.441c0,1.681,1.368,3.049,3.049,3.049s3.048-1.368,3.048-3.049V88.523 C51.009,86.842,49.641,85.475,47.96,85.475z M49.009,111.964c0,0.578-0.47,1.049-1.048,1.049H47.96 c-0.578,0-1.048-0.471-1.048-1.049V88.523c0-0.578,0.471-1.049,1.049-1.049s1.048,0.471,1.048,1.049V111.964z">
+                                        </path>
+                                        <path
+                                            d="M43.273,17.024c0-2.025-1.647-3.672-3.672-3.672s-3.672,1.647-3.672,3.672s1.647,3.672,3.672,3.672 S43.273,19.049,43.273,17.024z M37.93,17.024c0-0.922,0.75-1.672,1.672-1.672s1.672,0.75,1.672,1.672s-0.75,1.672-1.672,1.672 S37.93,17.946,37.93,17.024z">
+                                        </path>
+                                        <path
+                                            d="M93.376,17.024c0-2.025-1.647-3.672-3.673-3.672c-2.024,0-3.672,1.647-3.672,3.672s1.647,3.672,3.672,3.672 C91.729,20.696,93.376,19.049,93.376,17.024z M88.031,17.024c0-0.922,0.75-1.672,1.672-1.672c0.923,0,1.673,0.75,1.673,1.672 s-0.75,1.672-1.673,1.672C88.781,18.696,88.031,17.946,88.031,17.024z">
+                                        </path>
+                                        <path
+                                            d="M93.55,78.672V59.87c2.413-1.353,4.05-3.932,4.05-6.889V15.896C97.6,11.542,94.058,8,89.703,8 c-4.354,0-7.896,3.542-7.896,7.896V52.98c0,2.957,1.636,5.536,4.049,6.889v18.803c-7.406,2.216-12.707,10.618-12.707,20.377 c0,11.552,7.426,20.95,16.554,20.95s16.555-9.398,16.555-20.95C106.258,89.29,100.956,80.888,93.55,78.672z M83.808,52.98V15.896 c0-3.251,2.645-5.896,5.896-5.896s5.896,2.645,5.896,5.896V52.98c0,3.251-2.646,5.896-5.896,5.896S83.808,56.231,83.808,52.98z M89.703,117.999c-8.025,0-14.554-8.501-14.554-18.95c0-9.18,5.021-17.026,11.937-18.658c0.028-0.007,0.049-0.026,0.076-0.035 c0.066-0.022,0.125-0.051,0.185-0.085c0.055-0.032,0.106-0.063,0.154-0.104c0.049-0.042,0.088-0.089,0.128-0.139 c0.04-0.051,0.076-0.1,0.106-0.157c0.029-0.055,0.048-0.113,0.066-0.174c0.02-0.065,0.034-0.129,0.04-0.199 c0.002-0.028,0.016-0.053,0.016-0.082V60.649c0.594,0.143,1.21,0.227,1.847,0.227s1.253-0.084,1.847-0.227v18.769 c0,0.029,0.014,0.054,0.017,0.082c0.006,0.069,0.02,0.132,0.04,0.197c0.018,0.062,0.037,0.12,0.067,0.176 c0.029,0.056,0.065,0.105,0.104,0.155c0.04,0.051,0.081,0.099,0.13,0.141c0.047,0.04,0.098,0.071,0.152,0.103 c0.06,0.034,0.119,0.063,0.185,0.085c0.027,0.009,0.047,0.028,0.076,0.035c6.917,1.631,11.938,9.478,11.938,18.658 C104.258,109.498,97.729,117.999,89.703,117.999z">
+                                        </path>
+                                        <path
+                                            d="M89.703,83.167c-6.941,0-12.588,7.121-12.588,15.873c0,0.552,0.447,1,1,1s1-0.448,1-1c0-7.649,4.75-13.873,10.588-13.873 c0.553,0,1-0.448,1-1S90.256,83.167,89.703,83.167z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-50">
+                    <div class="flex justify-between items-start">
+                        <div class="flex flex-col">
+                            <p class="text-xs text-gray-600 tracking-wide">Laundry</p>
+                            <h3 class="mt-1 text-lg text-indigo-500 font-bold">$ 518</h3>
+                        </div>
+                        <div class="bg-indigo-500 p-2 md:p-1 xl:p-2 rounded-md">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M20.25 0.75H3.75C2.92157 0.75 2.25 1.42157 2.25 2.25V21.75C2.25 22.5784 2.92157 23.25 3.75 23.25H20.25C21.0784 23.25 21.75 22.5784 21.75 21.75V2.25C21.75 1.42157 21.0784 0.75 20.25 0.75Z"
+                                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M5.25 3.75H8.25" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M19 3.20001V4.20001" stroke="#ffffff" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M16 3.20001V4.20001" stroke="#ffffff" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M2.25 6.75H21.75" stroke="#ffffff" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M12 20.25C14.8995 20.25 17.25 17.8995 17.25 15C17.25 12.1005 14.8995 9.75 12 9.75C9.10051 9.75 6.75 12.1005 6.75 15C6.75 17.8995 9.10051 20.25 12 20.25Z"
+                                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M9.75 15C9.75 14.4033 9.98705 13.831 10.409 13.409C10.818 13 11.3683 12.7647 11.9451 12.7507"
+                                        stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Second Row -->
+
+        </div>
+    </main>
+
+    <!-- Start Bottom Nav -->
+    <div class="fixed bottom-0 w-full px-8 py-4 bg-white shadow-lg rounded-2xl">
+        <div class="flex">
+
+            <div class="flex-1 group">
+                <a href="#"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                    <span class="block px-1 pt-1 pb-1">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z"
+                                    fill="#000000"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 1.25C11.2919 1.25 10.6485 1.45282 9.95055 1.79224C9.27585 2.12035 8.49642 2.60409 7.52286 3.20832L5.45628 4.4909C4.53509 5.06261 3.79744 5.5204 3.2289 5.95581C2.64015 6.40669 2.18795 6.86589 1.86131 7.46263C1.53535 8.05812 1.38857 8.69174 1.31819 9.4407C1.24999 10.1665 1.24999 11.0541 1.25 12.1672V13.7799C1.24999 15.6837 1.24998 17.1866 1.4027 18.3616C1.55937 19.567 1.88856 20.5401 2.63236 21.3094C3.37958 22.0824 4.33046 22.4277 5.50761 22.5914C6.64849 22.75 8.10556 22.75 9.94185 22.75H14.0581C15.8944 22.75 17.3515 22.75 18.4924 22.5914C19.6695 22.4277 20.6204 22.0824 21.3676 21.3094C22.1114 20.5401 22.4406 19.567 22.5973 18.3616C22.75 17.1866 22.75 15.6838 22.75 13.7799V12.1672C22.75 11.0541 22.75 10.1665 22.6818 9.4407C22.6114 8.69174 22.4646 8.05812 22.1387 7.46263C21.8121 6.86589 21.3599 6.40669 20.7711 5.95581C20.2026 5.5204 19.4649 5.06262 18.5437 4.49091L16.4771 3.20831C15.5036 2.60409 14.7241 2.12034 14.0494 1.79224C13.3515 1.45282 12.7081 1.25 12 1.25ZM8.27953 4.50412C9.29529 3.87371 10.0095 3.43153 10.6065 3.1412C11.1882 2.85833 11.6002 2.75 12 2.75C12.3998 2.75 12.8118 2.85833 13.3935 3.14119C13.9905 3.43153 14.7047 3.87371 15.7205 4.50412L17.7205 5.74537C18.6813 6.34169 19.3559 6.76135 19.8591 7.1467C20.3487 7.52164 20.6303 7.83106 20.8229 8.18285C21.0162 8.53589 21.129 8.94865 21.1884 9.58104C21.2492 10.2286 21.25 11.0458 21.25 12.2039V13.725C21.25 15.6959 21.2485 17.1012 21.1098 18.1683C20.9736 19.2163 20.717 19.8244 20.2892 20.2669C19.8649 20.7058 19.2871 20.9664 18.2858 21.1057C17.2602 21.2483 15.9075 21.25 14 21.25H10C8.09247 21.25 6.73983 21.2483 5.71422 21.1057C4.71286 20.9664 4.13514 20.7058 3.71079 20.2669C3.28301 19.8244 3.02642 19.2163 2.89019 18.1683C2.75149 17.1012 2.75 15.6959 2.75 13.725V12.2039C2.75 11.0458 2.75076 10.2286 2.81161 9.58104C2.87103 8.94865 2.98385 8.53589 3.17709 8.18285C3.36965 7.83106 3.65133 7.52164 4.14092 7.1467C4.6441 6.76135 5.31869 6.34169 6.27953 5.74537L8.27953 4.50412Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="flex-1 group">
+                <a href="#"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                    <span class="block px-1 pt-1 pb-1">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M12.75 9C12.75 8.58579 12.4142 8.25 12 8.25C11.5858 8.25 11.25 8.58579 11.25 9L11.25 11.25H9C8.58579 11.25 8.25 11.5858 8.25 12C8.25 12.4142 8.58579 12.75 9 12.75H11.25V15C11.25 15.4142 11.5858 15.75 12 15.75C12.4142 15.75 12.75 15.4142 12.75 15L12.75 12.75H15C15.4142 12.75 15.75 12.4142 15.75 12C15.75 11.5858 15.4142 11.25 15 11.25H12.75V9Z"
+                                    fill="#000000"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="flex-1 group">
+                <a href="#"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                    <span class="block px-1 pt-1 pb-1">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <rect x="5" y="4" width="14" height="17" rx="2" stroke="#000000" stroke-width="2">
+                                </rect>
+                                <path d="M9 9H15" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M9 13H15" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M9 17H13" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="flex-1 group">
+                <a href="#"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                    <span class="block px-1 pt-1 pb-1">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Bottom Nav -->
+
+</body>
+
+</html>
